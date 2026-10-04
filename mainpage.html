@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>PAI — Mengenal Islam</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet" />
+    <link href="assets/css/home.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <div id="rotate-screen">
+        <div class="rotate-content">
+            <div class="rotate-icon">
+                ↻
+            </div>
+            <p>
+                PUTAR PERANGKAT
+            </p>
+
+            <span>
+                Website ini hanya dapat digunakan<br>
+                dalam mode landscape.
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         MAIN SCENE
+    ========================================= -->
+
+    <section id="scene" class="relative w-screen overflow-hidden bg-[#FFFBF1]">
+
+        <div class="glow" style="left: -200px; top: -200px">
+        </div>
+
+        <div class="glow" style="right: -250px; bottom: -250px">
+        </div>
+
+
+        <div id="world" class="absolute inset-0 origin-center">
+
+
+            <!-- =================================
+                 HERO
+            ================================== -->
+
+            <div class="hero absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4">
+
+                <p class="font-sans text-xs md:text-sm tracking-[0.3em] text-[#5C574D]">
+                    PENDIDIKAN AGAMA ISLAM
+                </p>
+
+                <h1 class="mt-4 text-5xl md:text-8xl leading-none text-[#5C574D]">
+
+                    Mengenal
+
+                    <span class="italic text-[#E36A6A]">
+                        Islam
+                    </span>
+
+                </h1>
+
+                <p class="font-sans mt-8 text-xs md:text-sm tracking-[0.15em] text-[#8A857B]">
+                    SCROLL UNTUK MENJELAJAHI
+                </p>
+
+            </div>
+
+
+            <!-- =================================
+                 CARD 1
+            ================================== -->
+
+            <div class="parallax-card pos-1 group relative w-full aspect-[16/9] rounded-3xl overflow-hidden border border-[#E8E2D5] shadow-xl cursor-pointer"
+                data-page="materi1_2.html">
+
+                <img src="assets/img/img_m1.webp" alt="materi1"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
+                </div>
+
+                <!-- Badge -->
+
+                <div class="absolute top-5 left-5 z-10">
+
+                    <span
+                        class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs tracking-[0.2em]">
+
+                        MATERI 1 - 2
+
+                    </span>
+
+                </div>
+
+
+                <!-- Tombol -->
+
+                <div
+                    class="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-all duration-500 group-hover:bg-[#E36A6A] group-hover:rotate-45">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M7 17 17 7M7 7h10v10" />
+
+                    </svg>
+
+                </div>
+
+
+                <!-- Pelajari -->
+
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="h-px w-10 bg-[#E36A6A] transition-all duration-500 group-hover:w-20">
+                        </div>
+
+                        <span
+                            class="text-white/80 text-sm tracking-wider transition-colors duration-300 group-hover:text-white">
+
+                            Pelajari materi
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 CARD 2
+            ================================== -->
+
+            <div class="parallax-card pos-2 group relative w-full aspect-[16/9] rounded-3xl overflow-hidden border border-[#E8E2D5] shadow-xl cursor-pointer"
+                data-page="materi3_4.html">
+
+                <img src="assets/img/1.png" alt="Rukun Islam"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
+                </div>
+
+                <div class="absolute top-5 left-5 z-10">
+
+                    <span
+                        class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs tracking-[0.2em]">
+
+                        MATERI 3 - 4
+
+                    </span>
+
+                </div>
+
+                <div
+                    class="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-all duration-500 group-hover:bg-[#E36A6A] group-hover:rotate-45">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M7 17 17 7M7 7h10v10" />
+
+                    </svg>
+
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="h-px w-10 bg-[#E36A6A] transition-all duration-500 group-hover:w-20">
+                        </div>
+
+                        <span
+                            class="text-white/80 text-sm tracking-wider transition-colors duration-300 group-hover:text-white">
+
+                            Pelajari materi
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 CARD 3
+            ================================== -->
+
+            <div class="parallax-card pos-3 group relative w-full aspect-[16/9] rounded-3xl overflow-hidden border border-[#E8E2D5] shadow-xl cursor-pointer"
+                data-page="rukun-iman.html">
+
+                <img src="assets/img/1.png" alt="Rukun Iman"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
+                </div>
+
+                <div class="absolute top-5 left-5 z-10">
+
+                    <span
+                        class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs tracking-[0.2em]">
+
+                        MATERI 5 - 6
+
+                    </span>
+
+                </div>
+
+                <div
+                    class="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-all duration-500 group-hover:bg-[#E36A6A] group-hover:rotate-45">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M7 17 17 7M7 7h10v10" />
+
+                    </svg>
+
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="h-px w-10 bg-[#E36A6A] transition-all duration-500 group-hover:w-20">
+                        </div>
+
+                        <span
+                            class="text-white/80 text-sm tracking-wider transition-colors duration-300 group-hover:text-white">
+
+                            Pelajari materi
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 CARD 4
+            ================================== -->
+
+            <div class="parallax-card pos-4 group relative w-full aspect-[16/9] rounded-3xl overflow-hidden border border-[#E8E2D5] shadow-xl cursor-pointer"
+                data-page="akhlak.html">
+
+                <img src="assets/img/1.png" alt="Akhlak dalam Islam"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
+                </div>
+
+                <div class="absolute top-5 left-5 z-10">
+
+                    <span
+                        class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs tracking-[0.2em]">
+
+                        MATERI 04
+
+                    </span>
+
+                </div>
+
+                <div
+                    class="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-all duration-500 group-hover:bg-[#E36A6A] group-hover:rotate-45">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M7 17 17 7M7 7h10v10" />
+
+                    </svg>
+
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="h-px w-10 bg-[#E36A6A] transition-all duration-500 group-hover:w-20">
+                        </div>
+
+                        <span
+                            class="text-white/80 text-sm tracking-wider transition-colors duration-300 group-hover:text-white">
+
+                            Pelajari materi
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 CARD 5
+            ================================== -->
+
+            <div class="parallax-card pos-5 group relative w-full aspect-[16/9] rounded-3xl overflow-hidden border border-[#E8E2D5] shadow-xl cursor-pointer"
+                data-page="ibadah.html">
+
+                <img src="assets/img/1.png" alt="Ibadah"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
+                </div>
+
+                <div class="absolute top-5 left-5 z-10">
+
+                    <span
+                        class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs tracking-[0.2em]">
+
+                        MATERI 05
+
+                    </span>
+
+                </div>
+
+                <div
+                    class="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-all duration-500 group-hover:bg-[#E36A6A] group-hover:rotate-45">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M7 17 17 7M7 7h10v10" />
+
+                    </svg>
+
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="h-px w-10 bg-[#E36A6A] transition-all duration-500 group-hover:w-20">
+                        </div>
+
+                        <span
+                            class="text-white/80 text-sm tracking-wider transition-colors duration-300 group-hover:text-white">
+
+                            Pelajari materi
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 CARD 6
+            ================================== -->
+
+            <div class="parallax-card pos-6 group relative w-full aspect-[16/9] rounded-3xl overflow-hidden border border-[#E8E2D5] shadow-xl cursor-pointer"
+                data-page="sejarah.html">
+
+                <img src="assets/img/1.png" alt="Sejarah Islam"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent">
+                </div>
+
+                <div class="absolute top-5 left-5 z-10">
+
+                    <span
+                        class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white text-xs tracking-[0.2em]">
+
+                        MATERI 06
+
+                    </span>
+
+                </div>
+
+                <div
+                    class="absolute top-5 right-5 z-10 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white transition-all duration-500 group-hover:bg-[#E36A6A] group-hover:rotate-45">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+
+                        <path d="M7 17 17 7M7 7h10v10" />
+
+                    </svg>
+
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="h-px w-10 bg-[#E36A6A] transition-all duration-500 group-hover:w-20">
+                        </div>
+
+                        <span
+                            class="text-white/80 text-sm tracking-wider transition-colors duration-300 group-hover:text-white">
+
+                            Pelajari materi
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script src="assets/js/home.js"></script>
+
+
+</body>
+
+</html>

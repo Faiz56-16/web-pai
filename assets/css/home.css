@@ -1,0 +1,351 @@
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --cw: clamp(270px, 25vw, 380px);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    overflow: hidden;
+
+    overscroll-behavior: none;
+    touch-action: none;
+}
+
+body {
+    background: #fffbf1;
+    font-family: sans-serif;
+}
+
+
+/* =========================================
+   SCENE
+========================================= */
+
+#scene {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+
+    perspective: 1400px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   WORLD
+========================================= */
+
+#world {
+    transform-style: preserve-3d;
+
+    will-change: transform;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    font-family: "Libertinus Serif Display", serif;
+
+    will-change: transform, opacity;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.parallax-card {
+    position: absolute;
+
+    width: var(--cw);
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    transform-style: preserve-3d;
+
+    backface-visibility: hidden;
+
+    will-change: transform, opacity;
+
+    z-index: 20;
+
+    cursor: pointer;
+
+    user-select: none;
+     pointer-events: auto;
+    transition:
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+.parallax-card:hover {
+    box-shadow: 0 25px 60px rgba(92, 87, 77, 0.16);
+
+    filter: brightness(1.03);
+}
+
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.parallax-card img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   DESKTOP CARD POSITIONS
+========================================= */
+
+.pos-1 {
+    left: 4%;
+    top: 7%;
+}
+
+.pos-2 {
+    right: 4%;
+    top: 7%;
+}
+
+.pos-3 {
+    left: 4%;
+    bottom: 7%;
+}
+
+.pos-4 {
+    right: 4%;
+    bottom: 7%;
+}
+
+.pos-5 {
+    left: calc(50% - var(--cw) / 2);
+    top: 3%;
+}
+
+.pos-6 {
+    left: calc(50% - var(--cw) / 2);
+    bottom: 3%;
+}
+
+
+/* =========================================
+   MOBILE LANDSCAPE
+========================================= */
+/* MOBILE LANDSCAPE */
+@media (max-width: 767px) and (orientation: landscape) {
+    :root {
+        --cw: min(34vw, 240px);
+    }
+
+    .parallax-card {
+        right: auto;
+        bottom: auto;
+        width: var(--cw);
+        aspect-ratio: 16 / 9;
+        top: calc(50% + var(--dy));
+        left: calc(50% + var(--dx) - var(--cw) / 2);
+        z-index: 30;
+        pointer-events: auto;
+        touch-action: manipulation;
+    }
+
+    .pos-1 { --dx: -25vw; --dy: -28vh; }
+    .pos-2 { --dx:  25vw; --dy: -28vh; }
+    .pos-3 { --dx: -25vw; --dy:  28vh; }
+    .pos-4 { --dx:  25vw; --dy:  28vh; }
+    .pos-5 { --dx: 0vw; --dy: -5vh; }
+    .pos-6 { --dx: 0vw; --dy:  5vh; }
+
+    .parallax-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        pointer-events: none;
+    }
+
+    .hero {
+        pointer-events: none;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 0.65rem;
+    }
+}
+
+/* SMALLER MOBILE LANDSCAPE */
+@media (max-width: 600px) and (orientation: landscape) {
+    :root {
+        --cw: min(31vw, 190px);
+    }
+
+    .pos-1 { --dx: -24vw; --dy: -28vh; }
+    .pos-2 { --dx:  24vw; --dy: -28vh; }
+    .pos-3 { --dx: -24vw; --dy:  28vh; }
+    .pos-4 { --dx:  24vw; --dy:  28vh; }
+    .pos-5 { --dx: 0vw; --dy: -5vh; }
+    .pos-6 { --dx: 0vw; --dy:  5vh; }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+}
+
+/* =========================================
+   PORTRAIT MOBILE
+   WEBSITE TIDAK DIJALANKAN
+========================================= */
+
+#rotate-screen {
+    display: none;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+
+    #scene {
+        display: none;
+    }
+
+    #rotate-screen {
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 99999;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 100dvh;
+
+        background: #fffbf1;
+
+        text-align: center;
+
+        color: #5c574d;
+    }
+
+    .rotate-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 24px;
+    }
+
+    .rotate-icon {
+        width: 70px;
+        height: 70px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid #e8e2d5;
+
+        border-radius: 50%;
+
+        font-size: 34px;
+
+        color: #e36a6a;
+
+        animation: rotatePhone 2s ease-in-out infinite;
+    }
+
+    .rotate-content p {
+        margin: 8px 0 0;
+
+        font-family: "Libertinus Serif Display", serif;
+
+        font-size: 1.4rem;
+
+        letter-spacing: 0.2em;
+    }
+
+    .rotate-content span {
+        font-size: 0.75rem;
+
+        line-height: 1.7;
+
+        color: #8a857b;
+    }
+
+    @keyframes rotatePhone {
+
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 9999px;
+
+    background: #e36a6a;
+
+    opacity: 0.04;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}

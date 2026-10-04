@@ -1,0 +1,339 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            background: #FFFBF1;
+            color: #5C574D;
+        }
+
+
+        /* =====================================================
+           PORTRAIT — PAKSA LANDSCAPE
+        ===================================================== */
+
+        @media (max-width: 767px) and (orientation: portrait) {
+
+            body {
+                overflow: hidden;
+            }
+
+            .rotate-screen {
+                display: flex !important;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE LANDSCAPE
+        ===================================================== */
+
+        @media (max-width: 767px) and (orientation: landscape) {
+
+            main {
+                padding-left: 5vw !important;
+                padding-right: 5vw !important;
+                padding-bottom: 35px !important;
+            }
+
+
+            /* =========================
+               MATERIAL SECTION
+            ========================= */
+
+            .material-section {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+
+                min-height: 100vh !important;
+
+                gap: 5vw !important;
+
+                padding-top: 50px !important;
+                padding-bottom: 50px !important;
+            }
+
+
+            /* =========================
+               TEXT
+            ========================= */
+
+            .material-text {
+                width: 100%;
+                max-width: 100% !important;
+            }
+
+            .material-text>div:first-child {
+                margin-bottom: 10px !important;
+
+                font-size: 8px !important;
+                letter-spacing: .22em !important;
+            }
+
+
+            /* TITLE */
+
+            .material-text h2 {
+                margin-bottom: 15px !important;
+
+                font-size: clamp(25px, 4vw, 34px) !important;
+                line-height: .94 !important;
+            }
+
+
+            /* PARAGRAPH */
+
+            .material-text>p {
+                margin-bottom: 10px !important;
+
+                font-size: 9px !important;
+                line-height: 1.65 !important;
+            }
+
+
+            /* LIST */
+
+            .material-text ul {
+                margin-bottom: 10px !important;
+            }
+
+            .material-text li {
+                font-size: 9px !important;
+                line-height: 1.55 !important;
+            }
+
+
+            /* =========================
+               SUB BAB
+            ========================= */
+
+            .material-text h3 {
+                margin-bottom: 7px !important;
+
+                font-size: 11px !important;
+                line-height: 1.3 !important;
+            }
+
+            .material-text .mb-6 {
+                margin-bottom: 12px !important;
+            }
+
+
+            /* =========================
+               IMAGE
+            ========================= */
+
+            .material-image {
+                width: 100% !important;
+
+                height: 65vh !important;
+                max-height: 390px !important;
+            }
+
+            .material-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+
+            /* IMAGE LABEL */
+
+            .material-image>div {
+                left: 10px !important;
+                bottom: 10px !important;
+
+                padding: 6px 9px !important;
+
+                font-size: 7px !important;
+                letter-spacing: .12em !important;
+            }
+
+
+            /* =========================
+               AYAT
+            ========================= */
+
+            .material-text p[dir="rtl"] {
+                margin-top: 8px !important;
+
+                font-size: 15px !important;
+                line-height: 1.9 !important;
+            }
+
+            .material-text p[dir="rtl"]+p {
+                font-size: 8px !important;
+                line-height: 1.5 !important;
+            }
+
+
+            /* =========================
+               NAVIGATION
+            ========================= */
+
+            .navigation-section {
+                display: flex !important;
+
+                flex-direction: row !important;
+
+                align-items: center !important;
+                justify-content: space-between !important;
+
+                gap: 15px !important;
+
+                padding-top: 20px !important;
+                padding-bottom: 20px !important;
+            }
+
+            .navigation-section a {
+                display: flex !important;
+
+                align-items: center !important;
+
+                padding: 9px 13px !important;
+
+                font-size: 8px !important;
+                line-height: 1 !important;
+
+                border-radius: 8px !important;
+            }
+
+            .navigation-section span {
+                white-space: nowrap;
+            }
+
+            .navigation-section .text-lg {
+                font-size: 14px !important;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE LANDSCAPE KECIL
+        ===================================================== */
+
+        @media (max-width: 600px) and (orientation: landscape) {
+
+            main {
+                padding-left: 4vw !important;
+                padding-right: 4vw !important;
+            }
+
+            .material-section {
+                gap: 4vw !important;
+
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            .material-text h2 {
+                font-size: 24px !important;
+            }
+
+            .material-text>p,
+            .material-text li {
+                font-size: 8px !important;
+            }
+
+            .material-text h3 {
+                font-size: 10px !important;
+            }
+
+            .material-image {
+                height: 62vh !important;
+            }
+
+            .material-text p[dir="rtl"] {
+                font-size: 13px !important;
+            }
+
+            .navigation-section a {
+                padding: 8px 11px !important;
+
+                font-size: 7px !important;
+            }
+        }
+
+
+        /* =====================================================
+           ROTATE SCREEN
+        ===================================================== */
+
+        .rotate-screen {
+            display: none;
+
+            position: fixed;
+            inset: 0;
+
+            z-index: 999999;
+
+            width: 100%;
+            height: 100dvh;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+
+            gap: 12px;
+
+            background: #FFFBF1;
+
+            color: #5C574D;
+
+            text-align: center;
+        }
+
+        .rotate-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #DED8CC;
+
+            border-radius: 50%;
+
+            font-size: 30px;
+
+            color: #E36A6A;
+
+            animation: rotateDevice 2s ease-in-out infinite;
+        }
+
+        .rotate-title {
+            font-family: "Libertinus Serif Display", serif;
+
+            font-size: 22px;
+
+            letter-spacing: .12em;
+        }
+
+        .rotate-description {
+            font-size: 11px;
+
+            line-height: 1.7;
+
+            color: #999287;
+        }
+
+        @keyframes rotateDevice {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(90deg);
+            }
+        }
