@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>PAI — Kuis Evaluasi Materi 1 - 11</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Libertinus+Serif+Display&display=swap"
+        rel="stylesheet">
+    <link href="assets/css/materi.css" rel="stylesheet">
+</head>
+
+<body class="m-0 overflow-x-hidden bg-[#FFFBF1] text-[#5C574D]">
+
+    <!-- =====================================================
+         ROTATE SCREEN (Landscape Notice)
+    ===================================================== -->
+    <div class="rotate-screen">
+        <div class="rotate-icon">↻</div>
+        <div class="rotate-title">PUTAR PERANGKAT</div>
+        <div class="rotate-description">
+            Website ini hanya dapat digunakan<br>dalam mode landscape.
+        </div>
+    </div>
+
+    <main class="w-full min-h-screen px-[7vw] py-12">
+
+        <!-- HEADER QUIZ -->
+        <header class="mb-12 border-b border-[#DED8CC] pb-8 text-center">
+            <div class="mb-3 text-xs tracking-[.25em] text-[#E36A6A]">EVALUASI PEMBELAJARAN</div>
+            <h1 class="font-['Libertinus_Serif_Display'] text-5xl md:text-6xl text-[#5C574D]">
+                Kuis PAI <span class="italic text-[#E36A6A]">Pertemuan 1 – 11</span>
+            </h1>
+            <p class="mt-4 text-sm text-[#777168]">Uji pemahaman Anda mengenai Fitrah, Agama, Syariah, Akidah, Tauhid,
+                dan Peradaban Islam.</p>
+        </header>
+
+        <!-- FORM KUIS -->
+        <form id="quizForm" class="mx-auto max-w-4xl space-y-10">
+
+            <!-- IDENTITAS PESERTA -->
+            <div class="rounded-2xl border border-[#E8E2D5] bg-white p-6 md:p-8 shadow-sm">
+                <h2 class="mb-6 font-['Libertinus_Serif_Display'] text-2xl text-[#5C574D]">Identitas Mahasiswa</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#5C574D]"
+                            for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" required placeholder="Masukkan nama Anda"
+                            class="w-full rounded-xl border border-[#E8E2D5] bg-[#FFFBF1]/50 px-4 py-3 text-sm text-[#5C574D] outline-none focus:border-[#E36A6A]">
+                    </div>
+                    <div>
+                        <label class="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#5C574D]"
+                            for="nim">NIM / Kelas</label>
+                        <input type="text" id="nim" required placeholder="Masukkan NIM atau Kelas"
+                            class="w-full rounded-xl border border-[#E8E2D5] bg-[#FFFBF1]/50 px-4 py-3 text-sm text-[#5C574D] outline-none focus:border-[#E36A6A]">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOAL 1 (Pertemuan 1) -->
+            <div class="quiz-card rounded-2xl border border-[#E8E2D5] bg-white p-6 md:p-8 shadow-sm">
+                <span class="text-xs font-bold text-[#E36A6A]">SOAL 01 • PERTEMUAN 1</span>
+                <h3 class="mt-2 mb-4 text-lg font-semibold text-[#5C574D]">
+                    Naluri atau potensi dasar untuk meyakini adanya Tuhan sejak manusia diciptakan dinamakan...
+                </h3>
+                <div class="space-y-3">
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q1" value="A" class="accent-[#E36A6A]" required>
+                        <span>A. Fitrah Akhlak</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q1" value="B" class="accent-[#E36A6A]">
+                        <span>B. Fitrah Iman</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q1" value="C" class="accent-[#E36A6A]">
+                        <span>C. Fitrah Jasmani</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q1" value="D" class="accent-[#E36A6A]">
+                        <span>D. Fitrah Muamalah</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SOAL 2 (Pertemuan 2) -->
+            <div class="quiz-card rounded-2xl border border-[#E8E2D5] bg-white p-6 md:p-8 shadow-sm">
+                <span class="text-xs font-bold text-[#E36A6A]">SOAL 02 • PERTEMUAN 2</span>
+                <h3 class="mt-2 mb-4 text-lg font-semibold text-[#5C574D]">
+                    Akal manusia memiliki keterbatasan dalam memahami perkara ghaib dan makna kehidupan. Oleh karena
+                    itu, manusia membutuhkan...
+                </h3>
+                <div class="space-y-3">
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q2" value="A" class="accent-[#E36A6A]" required>
+                        <span>A. Sains spekulatif</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q2" value="B" class="accent-[#E36A6A]">
+                        <span>B. Wahyu / Agama</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q2" value="C" class="accent-[#E36A6A]">
+                        <span>C. Budaya lokal</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q2" value="D" class="accent-[#E36A6A]">
+                        <span>D. Hawa nafsu</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SOAL 3 (Pertemuan 3) -->
+            <div class="quiz-card rounded-2xl border border-[#E8E2D5] bg-white p-6 md:p-8 shadow-sm">
+                <span class="text-xs font-bold text-[#E36A6A]">SOAL 03 • PERTEMUAN 3</span>
+                <h3 class="mt-2 mb-4 text-lg font-semibold text-[#5C574D]">
+                    Karakteristik utama Islam yang berarti bersumber langsung dari Allah, bukan sekadar hasil pemikiran
+                    atau budaya manusia adalah...
+                </h3>
+                <div class="space-y-3">
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q3" value="A" class="accent-[#E36A6A]" required>
+                        <span>A. Syumuliyah</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q3" value="B" class="accent-[#E36A6A]">
+                        <span>B. Kamil</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q3" value="C" class="accent-[#E36A6A]">
+                        <span>C. Rabbaniyyah</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q3" value="D" class="accent-[#E36A6A]">
+                        <span>D. Insaniyyah</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SOAL 4 (Pertemuan 4) -->
+            <div class="quiz-card rounded-2xl border border-[#E8E2D5] bg-white p-6 md:p-8 shadow-sm">
+                <span class="text-xs font-bold text-[#E36A6A]">SOAL 04 • PERTEMUAN 4</span>
+                <h3 class="mt-2 mb-4 text-lg font-semibold text-[#5C574D]">
+                    Keringanan yang diberikan Islam dalam pelaksanaan ibadah sesuai dengan kondisi dan kemampuan manusia
+                    disebut...
+                </h3>
+                <div class="space-y-3">
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q4" value="A" class="accent-[#E36A6A]" required>
+                        <span>A. Tsawabit</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q4" value="B" class="accent-[#E36A6A]">
+                        <span>B. Mutaghayyirat</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q4" value="C" class="accent-[#E36A6A]">
+                        <span>C. Rukhshah</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q4" value="D" class="accent-[#E36A6A]">
+                        <span>D. Azimah</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SOAL 5 (Pertemuan 5) -->
+            <div class="quiz-card rounded-2xl border border-[#E8E2D5] bg-white p-6 md:p-8 shadow-sm">
+                <span class="text-xs font-bold text-[#E36A6A]">SOAL 05 • PERTEMUAN 5</span>
+                <h3 class="mt-2 mb-4 text-lg font-semibold text-[#5C574D]">
+                    Unsur utama syariah yang membahas tentang aturan praktis/struktur penyangga kehidupan (fikih)
+                    disebut...
+                </h3>
+                <div class="space-y-3">
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q5" value="A" class="accent-[#E36A6A]" required>
+                        <span>A. I'tiqadiyah</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q5" value="B" class="accent-[#E36A6A]">
+                        <span>B. Amaliyah</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q5" value="C" class="accent-[#E36A6A]">
+                        <span>C. Akhlak</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q5" value="D" class="accent-[#E36A6A]">
+                        <span>D. Sanad</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SOAL 6 (Pertemuan 9) -->
+            <div class="quiz-card rounded-2xl border border-[#E8E2D5] bg-white p-6 md:p-8 shadow-sm">
+                <span class="text-xs font-bold text-[#E36A6A]">SOAL 06 • PERTEMUAN 9</span>
+                <h3 class="mt-2 mb-4 text-lg font-semibold text-[#5C574D]">
+                    Istilah yang menggambarkan bahwa keimanan manusia bersifat fluktuatif (dapat bertambah dan
+                    berkurang) adalah...
+                </h3>
+                <div class="space-y-3">
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q6" value="A" class="accent-[#E36A6A]" required>
+                        <span>A. Tashdiq bi al-Qalb</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q6" value="B" class="accent-[#E36A6A]">
+                        <span>B. Iqrar bi al-Lisan</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q6" value="C" class="accent-[#E36A6A]">
+                        <span>C. Yazidu wa Yankush</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q6" value="D" class="accent-[#E36A6A]">
+                        <span>D. Tauqifiyah</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SOAL 7 (Pertemuan 10) -->
+            <div class="quiz-card rounded-2xl border border-[#E8E2D5] bg-white p-6 md:p-8 shadow-sm">
+                <span class="text-xs font-bold text-[#E36A6A]">SOAL 07 • PERTEMUAN 10</span>
+                <h3 class="mt-2 mb-4 text-lg font-semibold text-[#5C574D]">
+                    Kesadaran spiritual bahwa manusia selalu berada dalam pengawasan Allah sehingga menjaga etika
+                    profesional dinamakan...
+                </h3>
+                <div class="space-y-3">
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q7" value="A" class="accent-[#E36A6A]" required>
+                        <span>A. Tawakal</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q7" value="B" class="accent-[#E36A6A]">
+                        <span>B. Muraqabah</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q7" value="C" class="accent-[#E36A6A]">
+                        <span>C. Riya Digital</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q7" value="D" class="accent-[#E36A6A]">
+                        <span>D. Fatalisme</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SOAL 8 (Pertemuan 11) -->
+            <div class="quiz-card rounded-2xl border border-[#E8E2D5] bg-white p-6 md:p-8 shadow-sm">
+                <span class="text-xs font-bold text-[#E36A6A]">SOAL 08 • PERTEMUAN 11</span>
+                <h3 class="mt-2 mb-4 text-lg font-semibold text-[#5C574D]">
+                    Tokoh muslim yang dikenal sebagai Bapak Aljabar dan perintis konsep algoritma serta angka nol
+                    adalah...
+                </h3>
+                <div class="space-y-3">
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q8" value="A" class="accent-[#E36A6A]" required>
+                        <span>A. Ibnu Sina</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q8" value="B" class="accent-[#E36A6A]">
+                        <span>B. Al-Khwarizmi</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q8" value="C" class="accent-[#E36A6A]">
+                        <span>C. Ibnu al-Haytham</span>
+                    </label>
+                    <label
+                        class="flex cursor-pointer items-center gap-3 rounded-xl border border-[#E8E2D5] p-3 text-sm hover:bg-[#FFFBF1]">
+                        <input type="radio" name="q8" value="D" class="accent-[#E36A6A]">
+                        <span>D. Ibnu Khaldun</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="mainpage.html"
+                    class="prev-button flex items-center gap-2 rounded-xl border border-[#E8E2D5] bg-white px-5 py-3 font-medium text-[#5C574D] no-underline transition-all hover:bg-gray-50 active:scale-95"
+                    id="prevButton">
+                    <span class="prev-arrow text-lg">←</span>
+                    <span>KEMBALI</span>
+                </a>
+
+                <button type="submit"
+                    class="rounded-xl bg-[#5C574D] px-8 py-3.5 text-base font-medium text-white transition-all hover:bg-[#E36A6A] active:scale-95 shadow-md">
+                    KIRIM JAWABAN & LIHAT HASIL
+                </button>
+            </div>
+
+        </form>
+
+
+
+        <!-- RESULT SECTION (HIDDEN BY DEFAULT) -->
+        <div id="resultModal"
+            class="hidden mx-auto mt-12 max-w-4xl rounded-2xl border border-[#E36A6A] bg-white p-8 text-center shadow-lg">
+            <h2 class="font-['Libertinus_Serif_Display'] text-3xl text-[#5C574D]">Hasil Kuis Evaluasi</h2>
+            <p id="participantName" class="mt-2 text-sm font-semibold text-[#777168]"></p>
+
+            <div class="my-6">
+                <span id="scoreText"
+                    class="font-['Libertinus_Serif_Display'] text-6xl font-bold text-[#E36A6A]">0</span>
+                <span class="text-2xl text-[#777168]"> / 100</span>
+            </div>
+
+            <p id="scoreFeedback" class="text-base text-[#5C574D] mb-6"></p>
+
+            <button onclick="window.location.reload()"
+                class="rounded-xl border border-[#5C574D] px-6 py-2.5 text-sm font-medium text-[#5C574D] hover:bg-[#FFFBF1]">
+                Coba Lagi
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- SCRIPT EVALUASI JAWABAN -->
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Kunci Jawaban
+            const answers = {
+                q1: 'B', // Fitrah Iman
+                q2: 'B', // Wahyu / Agama
+                q3: 'C', // Rabbaniyyah
+                q4: 'C', // Rukhshah
+                q5: 'B', // Amaliyah
+                q6: 'C', // Yazidu wa Yankush
+                q7: 'B', // Muraqabah
+                q8: 'B'  // Al-Khwarizmi
+            };
+
+            let score = 0;
+            const totalQuestions = Object.keys(answers).length;
+
+            // Evaluasi Skor
+            for (let q in answers) {
+                const selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) {
+                    score += (100 / totalQuestions);
+                }
+            }
+
+            // Tampilkan Identitas & Hasil
+            const nama = document.getElementById('nama').value;
+            const nim = document.getElementById('nim').value;
+
+            document.getElementById('participantName').innerText = `Nama: ${nama} (${nim})`;
+            document.getElementById('scoreText').innerText = Math.round(score);
+
+            let feedback = '';
+            if (score === 100) {
+                feedback = 'Sangat Luar Biasa! Anda telah menguasai seluruh materi PAI dari Pertemuan 1 hingga 11 dengan sempurna.';
+            } else if (score >= 75) {
+                feedback = 'Bagus sekali! Pemahaman Anda terhadap materi PAI sudah sangat baik.';
+            } else {
+                feedback = 'Tetap semangat! Pelajari kembali rangkuman materi 1 sampai 11 untuk memperdalam pemahaman.';
+            }
+
+            document.getElementById('scoreFeedback').innerText = feedback;
+
+            // Sembunyikan Form & Tampilkan Hasil
+            document.getElementById('quizForm').classList.add('hidden');
+            document.getElementById('resultModal').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    <script src="assets/js/materi.js"></script>
+</body>
+
+</html>

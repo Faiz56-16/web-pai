@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>PAI — Anggota Kelompok</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Libertinus+Serif+Display&display=swap"
+        rel="stylesheet">
+    <link href="assets/css/materi.css" rel="stylesheet">
+</head>
+
+<body class="m-0 overflow-x-hidden bg-[#FFFBF1] text-[#5C574D]">
+
+    <!-- =====================================================
+         ROTATE SCREEN (Landscape Notice)
+    ===================================================== -->
+    <div class="rotate-screen">
+        <div class="rotate-icon">↻</div>
+        <div class="rotate-title">PUTAR PERANGKAT</div>
+        <div class="rotate-description">
+            Website ini hanya dapat digunakan<br>dalam mode landscape.
+        </div>
+    </div>
+
+    <main class="w-full min-h-screen px-[7vw] py-12 flex flex-col justify-between">
+
+        <!-- HEADER SECTION -->
+        <header class="mb-8 border-b border-[#DED8CC] pb-6 text-center">
+            <div class="mb-2 text-xs tracking-[.25em] text-[#E36A6A]">PENDIDIKAN AGAMA ISLAM</div>
+            <h1 class="font-['Libertinus_Serif_Display'] text-4xl md:text-5xl text-[#5C574D]">
+                Anggota <span class="italic text-[#E36A6A]">Kelompok</span>
+            </h1>
+            <p class="mt-2 text-sm text-[#777168]">
+                Tim penyusun dan pengembang materi presentasi Pendidikan Agama Islam.
+            </p>
+        </header>
+
+        <!-- CARD LIST ANGGOTA KELOMPOK -->
+        <div class="mx-auto w-full max-w-2xl rounded-2xl border border-[#E8E2D5] bg-white p-8 shadow-sm">
+
+            <div class="flex items-center justify-between border-b border-[#E8E2D5] pb-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-[#E36A6A] uppercase">KELOMPOK 05</span>
+                    <h2 class="font-['Libertinus_Serif_Display'] text-2xl text-[#5C574D] mt-1">Mengenal Islam</h2>
+                </div>
+                <span
+                    class="text-xs bg-[#FFFBF1] px-3 py-1.5 rounded-full text-[#5C574D] font-medium border border-[#E8E2D5]">
+                    Unviversitas Riau
+                </span>
+            </div>
+
+            <!-- DAFTAR ANGGOTA -->
+            <div class="space-y-4">
+
+                <!-- Ketua -->
+                <div
+                    class="flex items-center justify-between rounded-xl border border-[#E8E2D5] bg-[#FFFBF1]/40 p-4 transition-all hover:border-[#E36A6A]">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E36A6A] text-white font-bold text-sm">
+                            01
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-[#5C574D] text-base">Rizqy Haryanto</h3>
+                            <p class="text-xs text-[#777168]">NIM. 26071104578</p>
+                        </div>
+                    </div>
+                    <span class="rounded-lg bg-[#E36A6A]/10 px-3 py-1 text-xs font-semibold text-[#E36A6A]">
+                        Ketua
+                    </span>
+                </div>
+
+                <!-- Anggota 1 -->
+                <div
+                    class="flex items-center justify-between rounded-xl border border-[#E8E2D5] p-4 transition-all hover:bg-[#FFFBF1]/30">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E8E2D5] text-[#5C574D] font-bold text-sm">
+                            02
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-[#5C574D] text-base">Raisya Chayyara Adita</h3>
+                            <p class="text-xs text-[#777168]">NIM. 26021100460</p>
+                        </div>
+                    </div>
+                    <span class="rounded-lg bg-gray-100 px-3 py-1 text-xs font-medium text-[#777168]">
+                        Anggota
+                    </span>
+                </div>
+
+                <!-- Anggota 2 -->
+                <div
+                    class="flex items-center justify-between rounded-xl border border-[#E8E2D5] p-4 transition-all hover:bg-[#FFFBF1]/30">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E8E2D5] text-[#5C574D] font-bold text-sm">
+                            03
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-[#5C574D] text-base">Yola Fransiska</h3>
+                            <p class="text-xs text-[#777168]">NIM. 26011206872</p>
+                        </div>
+                    </div>
+                    <span class="rounded-lg bg-gray-100 px-3 py-1 text-xs font-medium text-[#777168]">
+                        Anggota
+                    </span>
+                </div>
+
+                <!-- Anggota 3 -->
+                <div
+                    class="flex items-center justify-between rounded-xl border border-[#E8E2D5] p-4 transition-all hover:bg-[#FFFBF1]/30">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E8E2D5] text-[#5C574D] font-bold text-sm">
+                            04
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-[#5C574D] text-base">Faiza Widana Nursyaban</h3>
+                            <p class="text-xs text-[#777168]">NIM. 26071305979</p>
+                        </div>
+                    </div>
+                    <span class="rounded-lg bg-gray-100 px-3 py-1 text-xs font-medium text-[#777168]">
+                        Anggota
+                    </span>
+                </div>
+                <div
+                    class="flex items-center justify-between rounded-xl border border-[#E8E2D5] p-4 transition-all hover:bg-[#FFFBF1]/30">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-[#E8E2D5] text-[#5C574D] font-bold text-sm">
+                            05
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-[#5C574D] text-base">Azzahra Dulanov</h3>
+                            <p class="text-xs text-[#777168]">NIM. 26061104847</p>
+                        </div>
+                    </div>
+                    <span class="rounded-lg bg-gray-100 px-3 py-1 text-xs font-medium text-[#777168]">
+                        Anggota
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- NAVIGATION -->
+        <div class="mt-8 flex justify-center">
+            <a href="mainpage.html"
+                class="prev-button flex items-center gap-2 rounded-xl border border-[#E8E2D5] bg-white px-6 py-3 font-medium text-[#5C574D] no-underline transition-all hover:bg-gray-50 active:scale-95 shadow-sm">
+                <span class="prev-arrow text-lg">←</span>
+                <span>KEMBALI KE HALAMAN UTAMA</span>
+            </a>
+        </div>
+
+    </main>
+    <footer class="mt-20 border-t border-[#DED8CC] bg-[#FFFBF1] px-[7vw] py-10">
+        <div
+            class="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+
+            <!-- LEFT: COPYRIGHT & SUBJECT INFO -->
+            <div>
+                <h4 class="font-['Libertinus_Serif_Display'] text-xl font-normal text-[#5C574D]">
+                    Pendidikan Agama Islam
+                </h4>
+                <p class="mt-1 text-xs text-[#777168]">
+                    &copy; 2026 Media Pembelajaran Interaktif. All rights reserved.
+                </p>
+            </div>
+
+            <!-- RIGHT: WATERMARK / CREDITS -->
+            <div
+                class="flex items-center gap-3 rounded-2xl border border-[#E8E2D5] bg-white/60 px-5 py-3 shadow-xs backdrop-blur-sm">
+                <span
+                    class="flex h-8 w-8 items-center justify-center rounded-full bg-[#E36A6A]/10 text-[#E36A6A] font-bold text-xs">
+                    &lt;/&gt;
+                </span>
+                <div class="text-left">
+                    <span class="block text-[10px] tracking-widest text-[#E36A6A] uppercase font-semibold">
+                        KELOMPOK 5
+                    </span>
+                    <span class="font-['Libertinus_Serif_Display'] text-sm font-medium text-[#5C574D]">
+                        Ditenagai oleh Laptop Faiz
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="assets/js/materi.js"></script>
+</body>
+
+</html>
